@@ -1,0 +1,118 @@
+/* === Overlay covering only the right area beside sidebar === */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 270px; /* adjust if your sidebar width changes */
+  width: calc(100% - 270px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* ✅ Match background with your app or sidebar color */
+  background: #e5e7eb; /* light grey tone — can be changed */
+
+  /* Optional subtle overlay */
+  backdrop-filter: blur(3px);
+  
+  z-index: 2000;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* === Centered Form Card === */
+.modal-container {
+  width: 600px;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* === Header === */
+.modal-header h2 {
+  text-align: center;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* === Inputs and Labels === */
+.modal-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #111827;
+}
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.modal-form input:focus,
+.modal-form select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 4px rgba(99, 102, 241, 0.4);
+}
+
+/* === Buttons === */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.save-btn {
+  background-color: #6366f1;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #4f46e5;
+}
+
+.cancel-btn {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* === Page background reset === */
+body,
+html {
+  background-color: #e5e7eb; /* ✅ same color as modal background */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

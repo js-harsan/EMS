@@ -1,0 +1,53 @@
+/* ===========================
+   🌐 GLOBAL RESET & BASE STYLES
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #f8fafc; /* ✅ clean white background */
+  color: #1e293b;
+  overflow-y: auto; /* ✅ allow scrolling if content is long */
+}
+
+/* Smooth transitions */
+body,
+button,
+input {
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   🌟 APP CONTAINER
+=========================== */
+#root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===========================
+   ⚡ FADE ANIMATION
+=========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
